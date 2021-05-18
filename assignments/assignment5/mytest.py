@@ -4,6 +4,9 @@ import pytest
 
 from hw5 import *
 
+truth = pd.read_csv('tests_data/q5_corr.csv')#.set_index(['gender', 'age'])
+print(truth)
+
 
 def test_valid_input():
     fname = pathlib.Path(__file__)
@@ -119,8 +122,7 @@ def test_correlation():
     df = q.correlate_gender_age()
     pd.testing.assert_frame_equal(df, truth)
 
-truth = pd.read_csv('tests_data/q5_corr.csv')#.set_index(['gender', 'age'])
-print(truth)
+
 
 test_valid_input()
 test_str_input()
