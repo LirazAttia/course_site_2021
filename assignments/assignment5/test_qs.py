@@ -2,7 +2,7 @@ import pathlib
 
 import pytest
 
-from hw51 import *
+#from hw51 import *
 
 
 def test_valid_input():
